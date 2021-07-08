@@ -59,9 +59,14 @@ body {
   background: rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.33);
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.33);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   border: 2px solid rgba(255, 255, 255, 0.18);
+  opacity: 0;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @media (max-width: 720px) {
@@ -160,5 +165,41 @@ body {
   text-decoration: none;
   color: var(--accent);
   margin-right: 2rem;
+}
+
+@-webkit-keyframes show-card {
+  0% {
+    opacity: 0;
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+}
+
+@keyframes show-card {
+  0% {
+    opacity: 0;
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -19,10 +19,8 @@ body {
     align-items: center;
 
     background-color: var(--white);
-
-    // background: url("./background.png");
-    // background-position: center;
     background-size: cover;
+    
 }
 
 .card {
@@ -50,8 +48,12 @@ body {
 
         background: rgba(0, 0, 0, 0.3);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.33);
-        backdrop-filter: blur(5px);
         border: 2px solid rgba(255, 255, 255, 0.18);
+
+        opacity: 0;
+        animation-duration: 0.75s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
 
         @media (max-width: 720px) {
             width: 60%;
@@ -138,4 +140,24 @@ body {
             margin-right: 2rem;
         }
     }
+}
+
+@keyframes show-card {
+
+    0% {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+
+    }
+
+    50% {
+        opacity: 1;
+        backdrop-filter: blur(0px);
+    }
+
+    100% {
+        opacity: 1;
+        backdrop-filter: blur(5px);
+    }
+
 }
