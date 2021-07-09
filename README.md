@@ -24,10 +24,18 @@
 
 <h2 id="customize"> The customizer </h2>
 <p>
+  
+<h3> Option One </h2>
+Use the customizer tool at <a href="https://tascord.github.io/xyz_profile/">https://tascord.github.io/xyz_profile/</a>.
+  
+<h3> Option Two </h3>
 Within the index.html file, there exists a commented out line, <code>&lt;!-- <script src="scripts/customize.js" defer></script> --&gt;</code>.
+<br>
 In order to enable the customizer, this line must be uncommented, as well as the following line, <code><script src="scripts/data.js"></script></code>, must be commented out.
-
+<br>
 Now, when you open the site, you will be greeted with some default data as well as a customizer widget that will allow you to change things until they're to your liking.
+
+<h3> For both options</h3>
 Once you're happy with everything, click the 'Copy JSON Data' button, to copy the config file to your clipboard.
 
 </p>
